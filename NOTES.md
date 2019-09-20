@@ -1,15 +1,15 @@
 How to Build a CLI Gem
 
-1. Plan your gem, imagine your interface
-2. Start with the project structure - google
-3. Start with the entry point - the file run
-4. force that to build the CLI interface
-5. stub out the interface
-6. start making things real
-7. discover objects.
-8. program
+1. flow
+2. classes
+  2a. class relationships
 
-A command line interface for wedding venues, starting with theknot.
+-user asks for wedding-venues
+-user sees list of wedding-venues
+-user selects wedding-venues
+-user sees wedding-venues details: style, budget and URL of the location
+
+A command line interface for wedding venues, starting with wedding-spot.
 
 user types wedding-venues
 
