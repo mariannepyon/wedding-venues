@@ -1,4 +1,4 @@
-require "wedding/venues/version"
+require_relative "./wedding/venues/version"
 
 module Wedding
   module Venues
