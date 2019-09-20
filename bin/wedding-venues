@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
 
-require './lib/wedding-venues'
+require '../lib/wedding-venues'
 
-Wedding::CLI.new.call
+WeddingVenues::CLI.new.call

@@ -1,6 +1,6 @@
 # Our CLI Controller
 
-class Wedding::CLI
+class WeddingVenues::CLI
   
   def call
     puts "Wedding Venues in Sacramento:"
