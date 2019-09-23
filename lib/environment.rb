@@ -1,7 +1,9 @@
+require 'open-uri'
+require 'nokogiri'
+require 'pry'
+
 require_relative "./wedding-venues/version"
 require_relative "./wedding-venues/CLI"
-
-require 'pry'
 
 module WeddingVenues
     class Error < StandardError; end
