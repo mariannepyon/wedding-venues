@@ -1,4 +1,4 @@
-class WeddingVenue::venue
+class WeddingVenues::Venue
   attr_accessor :name, :location, :price, :url
   
   def self.eastbay
