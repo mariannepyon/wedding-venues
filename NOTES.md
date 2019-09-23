@@ -12,6 +12,8 @@ How to Build a CLI Gem
 Classes
 - venue (generally singular)
 - CLI
+- Scraper
+- 
 
 A command line interface for wedding venues, starting with wedding-spot.
 

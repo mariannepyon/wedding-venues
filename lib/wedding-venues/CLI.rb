@@ -3,7 +3,7 @@
 class WeddingVenues::CLI
   
   def call
-    puts "Wedding Venues in East Bay, CA:"
+    puts "Welcome to Wedding Venues in East Bay, CA:"
   end
   
 end
