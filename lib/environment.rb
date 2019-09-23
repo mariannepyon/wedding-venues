@@ -1,6 +1,6 @@
 require 'open-uri'
 require 'nokogiri'
-require 'pry'
+
 
 require_relative "./wedding-venues/version"
 require_relative "./wedding-venues/CLI"
