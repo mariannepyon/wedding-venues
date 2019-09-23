@@ -1,4 +1,5 @@
 class WeddingVenue::venue
+  attr_accessor :name, :location, :price, :url
   
   def self.eastbay
     # I should return a bunch of instances of venue
