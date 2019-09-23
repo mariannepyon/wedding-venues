@@ -26,6 +26,8 @@ class WeddingVenues::Venue
     venue_3.location = "Livermore, CA"
     venue_3.price = "$15,980"
     venue_3.url = "https://www.wedding-spot.com/venue/57/Rios-Lovell-Estate-Winery-Rios-Reserve-Estate/"
+    
+    [venue_1, venue_2, venue_3]
   end
 
 end
