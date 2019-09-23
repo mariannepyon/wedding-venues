@@ -4,6 +4,7 @@ class WeddingVenues::CLI
   
   def call
     puts "Welcome to Wedding Venues in East Bay, CA:"
+    binding.pry
   end
   
 end
