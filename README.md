@@ -2,7 +2,7 @@
 
 # Wedding Venues
 
-This Ruby Gem provides a CLI to view the 5 best wedding venues in Sacramento in the World website.
+This Ruby Gem provides a CLI to view the 5 best wedding venues in East Bay, California Wedding Spot website.
 
 ## Installation
 
