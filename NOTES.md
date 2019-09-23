@@ -10,7 +10,7 @@ How to Build a CLI Gem
 -user sees wedding-venues details: style, budget and URL of the location
 
 Classes
-- venues
+- venue (generally singular)
 - 
 
 A command line interface for wedding venues, starting with wedding-spot.
