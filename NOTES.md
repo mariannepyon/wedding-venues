@@ -20,10 +20,15 @@ A command line interface for wedding venues, starting with wedding-spot.
 user types wedding-venues
 
 Show a list of venues
-  1. Hotel by Wedgewood Weddings - 1300 H Street, Sacramento, CA - Up to 200
+1. Fairview Metropolitan - Oakland, CA - $5,837 - https://www.wedding-spot.com/venue/1070/Fairview-Metropolitan/
+2. Canyon View - San Ramon, CA - $7,324 - https://www.wedding-spot.com/venue/82/Canyon-View/
+3. Rios Lovell Estate Winery - Livermore, CA - $15,980 - https://www.wedding-spot.com/venue/57/Rios-Lovell-Estate-Winery-Rios-Reserve-Estate/
 
 Which venue do you want to learn more about
 
 What is a venue?
 
-A venue has a name A venue has an address A venue has guest capacity
+A venue has a name 
+A venue has a location
+A venue has a budget
+A venue has a URL
