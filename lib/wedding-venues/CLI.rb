@@ -12,7 +12,7 @@ class WeddingVenues::CLI
     puts "Wedding venues in East Bay, CA:"
     
     @venue = WeddingVenues::Venue.eastbay
-    @venue.each.with_index(1) do |deal, i|
+    @venue.each.with_index(1) do |venue, i|
       puts "#{i}. #{venue.name} - #{venue.location} - #{venue.price} - #{venue.url}"
     end
   end
@@ -24,7 +24,7 @@ class WeddingVenues::CLI
       input = gets.strip.downcase
       
       if input.to_i > 0
-        puts @deals[input.to_i-1]
+        puts @venue[input.to_i-1]
       elsif input == "list"
         list_venues
       else
