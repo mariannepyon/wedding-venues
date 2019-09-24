@@ -15,11 +15,8 @@ class WeddingVenues::Venue
     doc = Nokogiri::HTML(open("https://www.wedding-spot.com/wedding-venues/"))
     binding.pry
     
-    # venue = self.new
-    # venue.name = doc.search("")
-    # venue.location =
-    # venue.price = 
-    # venue.url = 
-    
+   name 
+   
+   
   end
 end
