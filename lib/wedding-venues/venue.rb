@@ -38,5 +38,6 @@ class WeddingVenues::Venue
   
   def self.scrape_weddingspot
     doc = Nokogiri::HTML(open("wedding-spot.com"))
-
+    binding.pry
+  end
 end
