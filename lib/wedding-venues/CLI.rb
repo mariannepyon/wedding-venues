@@ -28,7 +28,7 @@ class WeddingVenues::CLI
       elsif input == "list"
         list_venues
       else
-        puts "Not sure what you want, type list or exit."
+        puts "Option not found, type list or exit."
       end
     end
   end
