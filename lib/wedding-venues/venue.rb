@@ -2,12 +2,7 @@ class WeddingVenues::Venue
   attr_accessor :name, :location, :price, :url
   
   def self.eastbay
-    # # I should return a bunch of instances of venue
-    # puts <<-DOC.gsub /^\s*/, ''
-    #   1. Fairview Metropolitan - Oakland, CA - $5,837 - https://www.wedding-spot.com/venue/1070/Fairview-Metropolitan/
-    #   2. Canyon View - San Ramon, CA - $7,324 - https://www.wedding-spot.com/venue/82/Canyon-View/
-    #   3. Rios Lovell Estate Winery - Livermore, CA - $15,980 - https://www.wedding-spot.com/venue/57/Rios-Lovell-Estate-Winery-Rios-Reserve-Estate/
-    # DOC
+    # Scrape weddingspot and then return venue based on that data
     
     venue_1 = self.new
     venue_1.name = "Fairview Metropolitan"
