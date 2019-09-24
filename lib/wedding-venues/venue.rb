@@ -13,13 +13,13 @@ class WeddingVenues::Venue
   
   def self.scrape_weddingspot
     doc = Nokogiri::HTML(open("https://www.wedding-spot.com/wedding-venues/"))
-    
-    venue = self.new
-    venue.name = doc.search("")
-    venue.location =
-    venue.price = 
-    venue.url = 
-    
     binding.pry
+    
+    # venue = self.new
+    # venue.name = doc.search("")
+    # venue.location =
+    # venue.price = 
+    # venue.url = 
+    
   end
 end
