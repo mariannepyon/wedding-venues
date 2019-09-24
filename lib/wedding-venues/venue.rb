@@ -30,7 +30,7 @@ class WeddingVenues::Venue
     
     # [venue_1, venue_2, venue_3]
     
-    venues
+    
   end
 
 end
