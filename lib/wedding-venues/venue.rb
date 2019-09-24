@@ -4,7 +4,7 @@ class WeddingVenues::Venue
   def self.eastbay
     # Scrape weddingspot and then return venue based on that data'
     
-    deals = []
+    venues = []
     
     # Go to weddingspot, find the venues
     # extract the properties
@@ -30,7 +30,7 @@ class WeddingVenues::Venue
     
     # [venue_1, venue_2, venue_3]
     
-    
+    venues
   end
 
 end
