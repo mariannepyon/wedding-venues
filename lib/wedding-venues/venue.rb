@@ -8,36 +8,18 @@ class WeddingVenues::Venue
     
     venues << self.scrape_weddingspot
     
-    
-    # Go to weddingspot, find the venues
-    # extract the properties
-    #instantiate a venue
-        
-    # venue_1 = self.new
-    # venue_1.name = "Fairview Metropolitan"
-    # venue_1.location = "Oakland, CA"
-    # venue_1.price = "$5,837"
-    # venue_1.url = "https://www.wedding-spot.com/venue/1070/Fairview-Metropolitan/"
-    
-    # venue_2 = self.new
-    # venue_2.name = "Canyon View"
-    # venue_2.location = "San Ramon, CA"
-    # venue_2.price = "$7,324"
-    # venue_2.url = "https://www.wedding-spot.com/venue/82/Canyon-View/"
-    
-    # venue_3 = self.new
-    # venue_3.name = "Rios Lovell Estate Winery"
-    # venue_3.location = "Livermore, CA"
-    # venue_3.price = "$15,980"
-    # venue_3.url = "https://www.wedding-spot.com/venue/57/Rios-Lovell-Estate-Winery-Rios-Reserve-Estate/"
-    
-    # [venue_1, venue_2, venue_3]
-    
     venues
   end
   
   def self.scrape_weddingspot
-    doc = Nokogiri::HTML(open("https://wedding-spot.com"))
+    doc = Nokogiri::HTML(open("https://www.wedding-spot.com/wedding-venues/"))
+    
+    venue = self.new
+    venue.name = doc.search("")
+    venue.location =
+    venue.price = 
+    venue.url = 
+    
     binding.pry
   end
 end
