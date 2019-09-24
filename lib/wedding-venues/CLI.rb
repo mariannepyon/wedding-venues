@@ -24,7 +24,8 @@ class WeddingVenues::CLI
       input = gets.strip.downcase
       
       if input.to_i > 0
-        puts @venue[input.to_i-1]
+        the_venue = @venue[input.to_i-1]
+        puts "#{the_venue.name} - #{the_venue.location} - #{the_venue.price} - #{the_venue.url}"
       elsif input == "list"
         list_venues
       else
