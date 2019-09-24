@@ -6,6 +6,9 @@ class WeddingVenues::Venue
     
     venues = []
     
+    venues << self.scrape_weddingspot
+    
+    
     # Go to weddingspot, find the venues
     # extract the properties
     #instantiate a venue
@@ -32,5 +35,8 @@ class WeddingVenues::Venue
     
     venues
   end
+  
+  def self.scrape_weddingspot
+    doc = Nokogiri::HTML(open("wedding-spot.com"))
 
 end
