@@ -16,7 +16,10 @@ class WeddingVenues::CLI
     #   2. Canyon View - San Ramon, CA - $7,324 - https://www.wedding-spot.com/venue/82/Canyon-View/
     #   3. Rios Lovell Estate Winery - Livermore, CA - $15,980 - https://www.wedding-spot.com/venue/57/Rios-Lovell-Estate-Winery-Rios-Reserve-Estate/
     # DOC
-    @venues = WeddingVenues::Venue.eastbay
+    @venue = WeddingVenues::Venue.eastbay
+    @venue.each.with_index(1) do |deal, i|
+      puts "#{i}, #{venue.name} - #{venue.location} - #{venue.price} - #{venue.url}"
+    end
   end
   
   def menu
@@ -24,6 +27,7 @@ class WeddingVenues::CLI
     while input != "exit"
       puts "Enter the number of the venue you'd like more info on or type list to see the venues again or exit:"
       input = gets.strip.downcase
+      
       if input.to_i > 0
         puts @deals[input.to_i-1]
       elsif input == "list"
