@@ -24,14 +24,9 @@ class WeddingVenues::CLI
     while input != "exit"
       puts "Enter the number of the venue you'd like more info on or type list to see the venues again or exit:"
       input = gets.strip.downcase
-      case input
-      when "1"
-        puts "More info on deal 1..."
-      when "2"
-        puts "More infor on deal 2"
-      when "3"
-        puts "More infor on deal 3"
-      when "list"
+      if input.to_i > 0
+        puts @deals[input.to_i-1]
+      elsif input == "list"
         list_venues
       else
         puts "Not sure what you want, type list or exit."
