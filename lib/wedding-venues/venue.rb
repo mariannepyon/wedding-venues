@@ -13,12 +13,14 @@ class WeddingVenues::Venue
   
   def self.scrape_weddingspot
     doc = Nokogiri::HTML(open("https://www.wedding-spot.com/wedding-venues/"))
-    doc.css(".venue-box-content-with-budget").each do |venue|
-      name = venue.css(".venue-name").text
-      location = venue.css(".venue-region").text
-      price = venue.css(".venue-properties-content").text.strip
-      url = venue.css("a.TWS.SEARCH.searchResultClicked(1, 25, 1070, undefined, 1);").first.attr("href")
+    
+    # doc.css(".venue-box-content-with-budget").each do |venue|
+    #   name = venue.css(".venue-name").text
+    #   location = venue.css(".venue-region").text
+    #   price = venue.css(".venue-properties-content").text.strip
+    #   url = venue.css("a.venu-link").first.attr("href")
       binding.pry
     
-  end
+ # end
+end
 end
