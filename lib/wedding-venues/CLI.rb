@@ -9,7 +9,7 @@ class WeddingVenues::CLI
   end
   
   def list_venues
-    @venue = WeddingVenues::Venue.eastbay
+    @venue = WeddingVenues::Venue.new.make_venues
     @venue.each.with_index(1) do |venue, i|
       puts "#{i}. #{venue.name} - #{venue.location} - #{venue.url}"
     end

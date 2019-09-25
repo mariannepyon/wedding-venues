@@ -4,13 +4,13 @@ class WeddingVenues::Venue
 
   @@all = []
   
-  def self.new_from_index_page(venue)
-    self.new(
-      venue.css("div.venue-box-content-with-budget .venue-name").text
-      venue.css("div.venue-box-content-with-budget .venue-region").text.strip
-      venue.css("a.venue-link").first.attribute("href").strip
-      )
-    end
+  # def self.new_from_index_page(venue)
+  #   self.new(
+  #     venue.css("div.venue-box-content-with-budget .venue-name").text
+  #     venue.css("div.venue-box-content-with-budget .venue-region").text.strip
+  #     venue.css("a.venue-link").first.attribute("href").strip
+  #     )
+  #   end
   
   def initialize(name, location, url)
     @name = name
@@ -22,7 +22,6 @@ class WeddingVenues::Venue
   def self.all
     @@all
   end
-  
  end
   
   # def self.eastbay
