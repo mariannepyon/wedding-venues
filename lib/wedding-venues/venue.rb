@@ -28,7 +28,22 @@ class WeddingVenues::Venue
     self.all[id-1]
   end
 
-
+  def venue_name
+    @venue_name ||= doc.search("div.venue-box-content-with-budget .venue-name").text
+  end
+  
+  def venue_location
+    @venue_location ||= doc.search("div.venue-box-content-with-budget .venue-region").text.strip
+  end
+  
+  def venue_url
+    @venue_url ||= doc.search("a.venue-link").first.attr("href").strip
+  end
+  
+  def doc
+    @doc ||= Nokogiri::HTML(open(self.url))
+  end
+end
 
     
 #     venues = []
