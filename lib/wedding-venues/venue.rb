@@ -17,11 +17,11 @@ class WeddingVenues::Venue
       doc.css(".venue-box-content-with-budget").each do |venue|
         name = venue.css("div.venue-box-content-with-budget .venue-name").text
         location = venue.css("div.venue-box-content-with-budget .venue-region").text.strip
-        url = venue.css("a.venue-link").first.attr("href").strip
+        url = venue.css("a.venue-link").first.attribute("href").strip
       end
       
-      #Venue.new(name, location, url)
-      venue
+      Venue.new(name, location, url)
+      
       
   end
-
+end
