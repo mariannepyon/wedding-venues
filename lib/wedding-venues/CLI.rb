@@ -43,24 +43,16 @@ class WeddingVenues::CLI
     puts "----------- #{venue.name}-----------"
     puts ""
     puts "Location:           #{venue.location}"
-    puts "Head Chef:          #{restaurant.head_chef}"
-    puts "Style of Food:      #{restaurant.food_style}"
-    puts "Standout Dish:      #{restaurant.best_dish}"
-    puts "Contact:            #{restaurant.contact}"
-    puts "Website:            #{restaurant.website_url}"
-    puts ""
-    puts "---------------Description--------------"
-    puts ""
-    puts "#{restaurant.description}"
+    puts "URL:                #{venue.url}"
     puts ""
   end
 
   def print_restaurants(from_number)
     puts ""
-    puts "---------- Restaurants #{from_number} - #{from_number+9} ----------"
+    puts "---------- Venues #{from_number} - #{from_number+9} ----------"
     puts ""
-    WorldsBestRestaurants::Restaurant.all[from_number-1, 10].each.with_index(from_number) do |restaurant, index|
-      puts "#{index}. #{restaurant.name} - #{restaurant.location}"
+    WorldsBestRestaurants::Restaurant.all[from_number-1].each.with_index(from_number) do |venue, index|
+      puts "#{index}. #{venue.name} - #{venue.location}"
     end
   end
 
