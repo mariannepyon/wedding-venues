@@ -25,4 +25,3 @@ class WeddingVenues::Venue
       venue
   end
 end
-end
