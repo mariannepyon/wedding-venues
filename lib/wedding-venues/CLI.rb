@@ -12,7 +12,7 @@ class WeddingVenues::CLI
   def list_venues
     @venue = WeddingVenues::Venue.eastbay
     @venue.each.with_index(1) do |venue, i|
-      puts "#{i}. #{venue.name} - #{venue.location} - #{venue.description} - #{venue.url}"
+      puts "#{i}. #{venue.name} - #{venue.location} - #{venue.url}"
     end
   end
   
@@ -24,7 +24,7 @@ class WeddingVenues::CLI
       
       if input.to_i > 0
         the_venue = @venue[input.to_i-1]
-        puts "#{the_venue.name} - #{the_venue.location} - #{the_venue.description} - #{the_venue.url}"
+        puts "#{the_venue.name} - #{the_venue.location} - #{the_venue.url}"
       elsif input == "list"
         list_venues
       else

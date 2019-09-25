@@ -1,5 +1,5 @@
 class WeddingVenues::Venue
-  attr_accessor :name, :location, :description, :url
+  attr_accessor :name, :location, :url
   
   
   def self.eastbay
@@ -18,7 +18,6 @@ class WeddingVenues::Venue
       doc.css(".venue-box-content-with-budget").each do |venue|
         name = venue.css(".venue-name").text
         location = venue.css(".venue-region").text.strip
-        description = venue.css(".venue-description").text.strip
         url = venue.css("a.venue-link").first.attr("href")
         
       Venue.new(name, location, description, url)
