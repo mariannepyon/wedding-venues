@@ -17,11 +17,11 @@ class WeddingVenues::Scraper
   #   self.get_page.css(".venue-box-content-with-budget")
   # end
 
-  def make_venues
-    scrape_venues_index.each do |venue|
-      WeddingVenues::Venue.new_from_index_page(venue)
-    end
-end
+  # def make_venues
+  #   scrape_venues_index.each do |venue|
+  #     WeddingVenues::Venue.new_from_index_page(venue)
+  #   end
+#end
 end
 end
 
