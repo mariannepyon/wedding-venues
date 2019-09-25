@@ -26,4 +26,4 @@ class WeddingVenues::Venue
       
   end
 end
-end
+#end
