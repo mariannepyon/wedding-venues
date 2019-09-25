@@ -52,8 +52,8 @@ class WeddingVenues::CLI
   #   puts ""
   #   WorldsBestRestaurants::Restaurant.all[from_number-1].each.with_index(from_number) do |venue, index|
   #     puts "#{index}. #{venue.name} - #{venue.location}"
-  #   end
-  end
+   # end
+  #end
 
 end
   
