@@ -2,13 +2,28 @@ class WeddingVenues::Venue
   
   attr_accessor :name, :location, :url
 
-  def self.eastbay
-    venues = []
-    
-    venues << self.scrape_weddingspot
-    
-    venues
+  @@all = []
+  
+  def initialize(name, location, url)
+    @name = name
+    @location = location
+    @url = url
+    @@all << self
   end
+  
+  def self.all
+    @@all
+  end
+  
+ 
+  
+  # def self.eastbay
+  #   venues = []
+    
+  #   venues << self.scrape_weddingspot
+    
+  #   venues
+  # end
   
   def self.scrape_weddingspot
     doc = Nokogiri::HTML(open("https://www.wedding-spot.com/wedding-venues/"))
