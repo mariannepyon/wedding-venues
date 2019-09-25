@@ -1,6 +1,16 @@
 class WeddingVenues::Venue
   attr_accessor :name, :location, :description, :url
   
+  @@all = []
+  
+  def initialize(venue)
+    @name = name
+    @location = location
+    @description = description
+    @url = url
+    save
+  end
+  
   def self.eastbay
     # Scrape weddingspot and then return venue based on that data'
     
