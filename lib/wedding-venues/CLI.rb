@@ -3,14 +3,13 @@
 class WeddingVenues::CLI
   
   def call
+    puts "Wedding venues in East Bay, CA:"
     list_venues
     menu
     goodbye
   end
   
   def list_venues
-    puts "Wedding venues in East Bay, CA:"
-    
     @venue = WeddingVenues::Venue.eastbay
     @venue.each.with_index(1) do |venue, i|
       puts "#{i}. #{venue.name} - #{venue.location} - #{venue.description} - #{venue.url}"
