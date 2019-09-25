@@ -6,18 +6,17 @@ class WeddingVenues::Venue
   
   def self.new_from_index_page(v)
     self.new(
-      r.css("h2").text,
-      "https://www.theworlds50best.com#{r.css("a").attribute("href").text}",
-      r.css("h3").text,
-      r.css(".position").text
+      v.css("h2").text,
+      "https://www.wedding-spot.com/#{v.css("a").attribute("href").text}",
+      v.css("h3").text,
+      v.css(".position").text
       )
   end
 
-  def initialize(name=nil, url=nil, location=nil, position=nil)
+  def initialize(name=nil, location=nil, url=nil)
     @name = name
-    @url = url
     @location = location
-    @position = position
+    @url = url
     @@all << self
   end
 
@@ -28,6 +27,7 @@ class WeddingVenues::Venue
   def self.find(id)
     self.all[id-1]
   end
+
 
 
     
