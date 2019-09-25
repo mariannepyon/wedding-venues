@@ -15,12 +15,13 @@ class WeddingVenues::Venue
     
     venue = self.new
       doc.css(".venue-box-content-with-budget").each do |venue|
-        venue.name = doc.search("div.venue-box-content-with-budget .venue-name").text
-        venue.location = doc.search("div.venue-box-content-with-budget .venue-region").text.strip
-        venue.url = doc.search("a.venue-link").first.attr("href").strip
-        
+        name = venue.css("div.venue-box-content-with-budget .venue-name").text
+        location = venue.css("div.venue-box-content-with-budget .venue-region").text.strip
+        url = venue.css("a.venue-link").first.attr("href").strip
+      end
+      
       #Venue.new(name, location, url)
       venue
       
   end
-end
+
