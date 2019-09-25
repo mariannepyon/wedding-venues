@@ -4,7 +4,7 @@ class WeddingVenues::CLI
   
   def call
     WeddingVenues::Scraper.new.make_venues
-    puts "Congrats on your engagement"
+    puts "Congrats on your engagement!"
     start
     # list_venues
     # menu
@@ -12,10 +12,9 @@ class WeddingVenues::CLI
   end
   
   def start
-    
     puts ""
     puts "What venue would you like more information on?"
-    input = gets.strip.to_i
+    input = gets.strip
     
     venue = WeddingVenues::Venue.find(input.to_i)
   
@@ -47,13 +46,13 @@ class WeddingVenues::CLI
     puts ""
   end
 
-  def print_restaurants(from_number)
-    puts ""
-    puts "---------- Venues #{from_number} - #{from_number+9} ----------"
-    puts ""
-    WorldsBestRestaurants::Restaurant.all[from_number-1].each.with_index(from_number) do |venue, index|
-      puts "#{index}. #{venue.name} - #{venue.location}"
-    end
+  # def print_restaurants(from_number)
+  #   puts ""
+  #   puts "---------- Venues #{from_number} - #{from_number+9} ----------"
+  #   puts ""
+  #   WorldsBestRestaurants::Restaurant.all[from_number-1].each.with_index(from_number) do |venue, index|
+  #     puts "#{index}. #{venue.name} - #{venue.location}"
+  #   end
   end
 
 end
