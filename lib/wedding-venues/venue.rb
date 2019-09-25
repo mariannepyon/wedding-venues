@@ -1,5 +1,5 @@
 class WeddingVenues::Venue
-  attr_accessor :name, :location, :price, :url
+  attr_accessor :name, :location, :description, :url
   
   def self.eastbay
     # Scrape weddingspot and then return venue based on that data'
@@ -16,8 +16,8 @@ class WeddingVenues::Venue
     
     # doc.css(".venue-box-content-with-budget").each do |venue|
     #   name = venue.css(".venue-name").text
-    #   location = venue.css(".venue-region").text
-    #   price = venue.css(".venue-properties-content").text.strip
+    #   location = venue.css(".venue-region").text.strip
+    #   description = venue.css(".venue-description").text.strip
     #   url = venue.css("a.venu-link").first.attr("href")
       binding.pry
     
