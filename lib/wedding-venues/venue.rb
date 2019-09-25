@@ -21,6 +21,8 @@ class WeddingVenues::Venue
     #   venues << 
     # }
     # puts venue_names
+    
+    title = doc.search("div.venue-name").first.text
     binding.pry
     
   # name 
