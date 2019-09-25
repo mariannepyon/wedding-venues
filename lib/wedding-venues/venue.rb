@@ -1,29 +1,55 @@
 class WeddingVenues::Venue
+  
   attr_accessor :name, :location, :url
   
+  @@all = []
   
-  def self.eastbay
-    # Scrape weddingspot and then return venue based on that data'
-    
-    venues = []
-    
-    venues << self.scrape_weddingspot
-    
-    venues
+  def self.new_from_index_page(v)
+    self.new(
+      r.css("h2").text,
+      "https://www.theworlds50best.com#{r.css("a").attribute("href").text}",
+      r.css("h3").text,
+      r.css(".position").text
+      )
   end
-  
-  def self.scrape_weddingspot
-    doc = Nokogiri::HTML(open("https://www.wedding-spot.com/wedding-venues/"))
+
+  def initialize(name=nil, url=nil, location=nil, position=nil)
+    @name = name
+    @url = url
+    @location = location
+    @position = position
+    @@all << self
+  end
+
+  def self.all
+    @@all
+  end
+
+  def self.find(id)
+    self.all[id-1]
+  end
+
+
     
-    venue = self.new
-      #doc.css(".venue-box-content-with-budget").each do |venue|
-        venue.name = doc.search("div.venue-box-content-with-budget .venue-name").text
-        venue.location = doc.search("div.venue-box-content-with-budget .venue-region").text.strip
-        venue.url = doc.search("a.venue-link").first.attr("href").strip
+#     venues = []
+    
+#     venues << self.scrape_weddingspot
+    
+#     venues
+#   end
+  
+#   def self.scrape_weddingspot
+#     doc = Nokogiri::HTML(open("https://www.wedding-spot.com/wedding-venues/"))
+    
+#     venue = self.new
+#       #doc.css(".venue-box-content-with-budget").each do |venue|
+#         venue.name = doc.search("div.venue-box-content-with-budget .venue-name").text
+#         venue.location = doc.search("div.venue-box-content-with-budget .venue-region").text.strip
+#         venue.url = doc.search("a.venue-link").first.attr("href").strip
         
-      #Venue.new(name, location, url)
-      venue
+#       #Venue.new(name, location, url)
+#       venue
       
-  end
-end
-#end
+#   end
+# end
+# #end
