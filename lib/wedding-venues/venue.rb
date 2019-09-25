@@ -6,7 +6,11 @@ class WeddingVenues::Venue
   
   def self.new_from_index_page(venue)
     self.new(
+      venue.css("div.venue-box-content-with-budget .venue-name").text
+      venue.css("div.venue-box-content-with-budget .venue-region").text.strip
+      venue.css("a.venue-link").first.attribute("href").strip
       )
+    end
   
   def initialize(name, location, url)
     @name = name
@@ -29,8 +33,8 @@ class WeddingVenues::Venue
   #   venues
   # end
   
-  def self.scrape_weddingspot
-    doc = Nokogiri::HTML(open("https://www.wedding-spot.com/wedding-venues/"))
+  # def self.scrape_weddingspot
+  #   doc = Nokogiri::HTML(open("https://www.wedding-spot.com/wedding-venues/"))
     
     # venue = self.new
     #   doc.css(".venue-box-content-with-budget").each do |venue|
@@ -38,16 +42,16 @@ class WeddingVenues::Venue
     #     location = venue.css("div.venue-box-content-with-budget .venue-region").text.strip
     #     url = venue.css("a.venue-link").first.attribute("href").strip
       
-      venue = self.new
-        name = doc.search("div.venue-box-content-with-budget .venue-name").text
-        location = doc.search("div.venue-box-content-with-budget .venue-region").text.strip
-        url = doc.search("a.venue-link").first.attribute("href").strip
+#       venue = self.new
+#         name = doc.search("div.venue-box-content-with-budget .venue-name").text
+#         location = doc.search("div.venue-box-content-with-budget .venue-region").text.strip
+#         url = doc.search("a.venue-link").first.attribute("href").strip
       
-      venue
-      end
+#       venue
+#       end
       
-      #Venue.new(name, location, url)
+#       #Venue.new(name, location, url)
       
       
-  #end
-end
+#   #end
+# end
