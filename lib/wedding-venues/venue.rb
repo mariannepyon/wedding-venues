@@ -19,9 +19,10 @@ class WeddingVenues::Venue
       location = venue.css(".venue-region").text.strip
       description = venue.css(".venue-description").text.strip
       url = venue.css("a.venue-link").first.attr("href")
+      
       Venue.new(name, location, description, url)
       binding.pry
     
- # end
+  end
 end
 end
