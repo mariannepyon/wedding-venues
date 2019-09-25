@@ -12,7 +12,7 @@ class WeddingVenues::Venue
   end
   
   def self.scrape_weddingspot
-    doc = Nokogiri::HTML(open("https://www.wedding-spot.com/"))
+    doc = Nokogiri::HTML(open("https://www.wedding-spot.com/wedding-venues/"))
     # cells = doc.search("div.venue-box-cell")
     # venues = []
     # cells.each { |element| 
