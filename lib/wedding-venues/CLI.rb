@@ -17,9 +17,32 @@ class WeddingVenues::CLI
     
     print_venues(venue)
     
+    puts ""
+    puts "Would you like to see another venue? Enter Y or N"
+
+    input = gets.strip.downcase
+    if input == "y"
+      start
+    elsif input == "n"
+      puts ""
+      puts "Thank you! Have a great day!"
+      exit
+    else
+      puts ""
+      puts "I don't understand that answer."
+      start
+    end
+  end
+
+   def print_venue(venue)
+      puts ""
+      puts "----------- #{venue.name} ------------------"
+      puts ""
+      puts "Location:           #{venue.location}"
+      puts "Website:            #{venue.url}"
+      puts ""
+    end
     
-  
-  
 #   def list_venues
 #     @venue = WeddingVenues::Venue.new.make_venues
 #     @venue.each.with_index(1) do |venue, i|
