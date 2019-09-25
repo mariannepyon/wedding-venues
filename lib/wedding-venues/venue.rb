@@ -4,6 +4,10 @@ class WeddingVenues::Venue
 
   @@all = []
   
+  def self.new_from_index_page(venue)
+    self.new(
+      )
+  
   def initialize(name, location, url)
     @name = name
     @location = location
@@ -15,7 +19,7 @@ class WeddingVenues::Venue
     @@all
   end
   
- 
+ end
   
   # def self.eastbay
   #   venues = []
