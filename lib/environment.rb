@@ -5,7 +5,7 @@ require 'pry'
 
 require_relative "./wedding-venues/version"
 require_relative "./wedding-venues/venue"
-require_relative "./wedding-venues/scraper"
+#require_relative "./wedding-venues/scraper"
 require_relative "./wedding-venues/CLI"
 
 module WeddingVenues
