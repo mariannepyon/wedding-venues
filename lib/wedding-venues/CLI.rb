@@ -4,7 +4,7 @@ class WeddingVenues::CLI
   
   def call
     WeddingVenues::Scraper.new.make_venues
-    puts "Wedding venues in East Bay, CA:"
+    puts "Congrats on your engagement"
     start
     # list_venues
     # menu
