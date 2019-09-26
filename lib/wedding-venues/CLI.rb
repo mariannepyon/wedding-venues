@@ -7,9 +7,7 @@ class WeddingVenues::CLI
     puts "Congratulations on your engagement! Welcome to Northern California wedding venues!"
     list_venues
     venue_information
-    # puts ""
-    # puts "Thank you! Have a great day!"
-    # exit
+    another_venue
   end
   
   def list_venues
@@ -25,11 +23,17 @@ class WeddingVenues::CLI
     puts "Which venue would you like more information on? Please write the number:"
 
     input = gets.strip.to_i
+    if input .to_i > 0
+      venue = WeddingVenues::Venue.find(input.to_i)
+      print_venue(venue)
+    else
+      puts ""
+      puts "I don't understand that answer."
+      venue_information
+    end
+  end
     
-    venue = WeddingVenues::Venue.find(input.to_i)
-    
-    print_venue(venue)
-    
+  def another_venue
     puts ""
     puts "Would you like to see another venue? Enter Y or N"
 
@@ -44,7 +48,7 @@ class WeddingVenues::CLI
     else
       puts ""
       puts "I don't understand that answer."
-      venue_information
+      another_venue
     end
   end
 
@@ -55,5 +59,6 @@ class WeddingVenues::CLI
       puts "Location:           #{venue.location}"
       puts "Website:            #{venue.url}"
       puts ""
+    another_venue
     end
   end
