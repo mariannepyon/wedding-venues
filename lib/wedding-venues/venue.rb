@@ -11,7 +11,6 @@ class WeddingVenues::Venue
       "https://www.wedding-spot.com#{venue.css("a").attribute("href")}"
       )
     end
-    
   
   def initialize(name=nil, location=nil, url=nil)
     @name = name
