@@ -3,18 +3,19 @@
 class WeddingVenues::CLI
   
   def call
+    
     puts "Welcome to wedding venues!"
-    list_venues
+    #list_venues
     venue_information
     # goodbye
   end
   
-  def list_venues
-    @venue = WeddingVenues::Venue.new
-    @venue.each.with_index(1) do |venue, i|
-      puts "#{i}. #{venue.name}"
-    end
-  end
+  # def list_venues
+  #   @venue = WeddingVenues::Venue.new
+  #   @venue.each.with_index(1) do |venue, i|
+  #     puts "#{i}. #{venue.name}"
+  #   end
+  # end
   
   
   def venue_information
@@ -25,7 +26,7 @@ class WeddingVenues::CLI
     
     venue = WeddingVenues::Venue.find(input.to_i)
     
-    print_venues(venue)
+    print_venue(venue)
     
     puts ""
     puts "Would you like to see another venue? Enter Y or N"

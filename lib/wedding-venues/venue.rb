@@ -19,6 +19,10 @@ class WeddingVenues::Venue
     @@all << self
   end
   
+  def self.find(id)
+    self.all[id-1]
+  end
+  
   def self.all
     @@all
   end
