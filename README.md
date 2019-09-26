@@ -4,21 +4,16 @@
 
 This Ruby Gem provides a CLI to view the 5 best wedding venues in East Bay, California Wedding Spot website.
 
-## Installation
+## Cloning Change
 
-Add this line to your application's Gemfile:
+To change the clone of your code:
 
-```ruby
-gem 'wedding-venues'
-```
+Type in terminal:
 
-And then execute:
+    $ git add
+    $ git commit -m "description of work"
+    $ git push
 
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install wedding-venues
 
 ## Usage
 
