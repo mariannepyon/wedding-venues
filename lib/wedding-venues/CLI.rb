@@ -23,7 +23,7 @@ class WeddingVenues::CLI
     puts "Which venue would you like more information on? Please write the number:"
 
     input = gets.strip.to_i
-    if input .to_i > 0
+    if input.to_i < 36
       venue = WeddingVenues::Venue.find(input.to_i)
       print_venue(venue)
     else
