@@ -4,7 +4,7 @@
 
 This Ruby Gem provides a CLI to view the 5 best wedding venues in East Bay, California Wedding Spot website.
 
-## Cloning Change
+## Installation
 
 To change the clone of your code:
 
