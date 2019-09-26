@@ -3,14 +3,24 @@
 class WeddingVenues::CLI
   
   def call
-    "Welcome to wedding venues!"
+    puts "Welcome to wedding venues!"
     list_venues
-    menu
-    goodbye
+    venue_information
+    # goodbye
   end
   
   def list_venues
+    @venue = WeddingVenues::Scraper.new(name, location, url)
+    @venue.each.with_index(1) do |venue, i|
+      puts "#{i}. #{venue.name}"
+    end
+  end
+  
+  
+  def venue_information
+    puts ""
     puts "Which venue would you like more information on?"
+
     input = gets.strip
     
     venue = WeddingVenues::Venue.find(input.to_i)
@@ -42,6 +52,9 @@ class WeddingVenues::CLI
       puts "Website:            #{venue.url}"
       puts ""
     end
+  end
+
+
     
 #   def list_venues
 #     @venue = WeddingVenues::Venue.new.make_venues

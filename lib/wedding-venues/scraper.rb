@@ -6,6 +6,7 @@ class WeddingVenues::Scraper
         name = venue.css("div.venue-box-content-with-budget .venue-name").text
         location = venue.css("div.venue-box-content-with-budget .venue-region").text.strip
         url = venue.css("a.venue-link").first.attribute("href").strip
+  	  
   	  WeddingVenues::Venue.new(name, location, url)	
   end
 
