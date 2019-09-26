@@ -5,17 +5,17 @@ class WeddingVenues::CLI
   def call
     WeddingVenues::Scraper.new.make_venues
     puts "Welcome to wedding venues!"
-    #list_venues
+    list_venues
     venue_information
     # goodbye
   end
   
-  # def list_venues
-  #   @venue = WeddingVenues::Venue.new
-  #   @venue.each.with_index(1) do |venue, i|
-  #     puts "#{i}. #{venue.name}"
-  #   end
-  # end
+  def list_venues
+    @venue = WeddingVenues::Venue.all
+    @venue.each.with_index(1) do |venue, i|
+      puts "#{i}. #{venue.name}"
+    end
+  end
   
   
   def venue_information

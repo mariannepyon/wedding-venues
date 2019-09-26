@@ -14,6 +14,10 @@ class WeddingVenues::Scraper
     Nokogiri::HTML(open("https://www.wedding-spot.com/wedding-venues/"))
   end
 
+# def scrape_venues_index
+#     self.get_page.css("main-content")
+#   end
+
   def scrape_venues_index
     self.get_page.css(".venue-box-content-with-budget")
   end
