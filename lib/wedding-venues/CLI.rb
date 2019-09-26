@@ -10,7 +10,7 @@ class WeddingVenues::CLI
   end
   
   def list_venues
-    @venue = WeddingVenues::Scraper.new(name, location, url)
+    @venue = WeddingVenues::Venue.new
     @venue.each.with_index(1) do |venue, i|
       puts "#{i}. #{venue.name}"
     end
