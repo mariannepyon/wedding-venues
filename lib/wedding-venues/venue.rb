@@ -4,15 +4,22 @@ class WeddingVenues::Venue
 
   @@all = []
   
-  def self.new_from_index_page(venue)
+   def self.new_from_index_page(venue)
     self.new(
-      venue.css("div.venue-box-content-with-budget .venue-name").text,
-      venue.css("div.venue-box-content-with-budget .venue-region").text.strip,
-      venue.css("a.venue-link").first.attribute("href").strip
-      )
+      venue.css("venue-name").text,
+      venue.css("venue-region").text,
+      "https://www.wedding-spot.com/wedding-venues#{r.css("a").attribute("href").text}"
     end
   
-  def initialize(name, location, url)
+  # def self.new_from_index_page(venue)
+  #   self.new(
+  #     venue.css("div.venue-box-content-with-budget .venue-name").text,
+  #     venue.css("div.venue-box-content-with-budget .venue-region").text,
+  #     venue.css("a.venue-link").attr("href")
+  #     )
+  #   end
+  
+  def initialize(name=nil, location=nil, url=nil)
     @name = name
     @location = location
     @url = url
@@ -22,7 +29,7 @@ class WeddingVenues::Venue
   def self.all
     @@all
   end
- end
+ 
 
   def self.find(id)
     self.all[id-1]
@@ -30,8 +37,8 @@ class WeddingVenues::Venue
 
   def doc
     @doc ||= Nokogiri::HTML(open(self.url))
-    end
   end
+end
   
   # def self.eastbay
   #   venues = []

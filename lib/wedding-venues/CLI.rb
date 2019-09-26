@@ -3,7 +3,7 @@
 class WeddingVenues::CLI
   
   def call
-    
+    WeddingVenues::Scraper.new.make_venues
     puts "Welcome to wedding venues!"
     #list_venues
     venue_information
@@ -33,7 +33,7 @@ class WeddingVenues::CLI
 
     input = gets.strip.downcase
     if input == "y"
-      start
+      venue_information
     elsif input == "n"
       puts ""
       puts "Thank you! Have a great day!"
@@ -41,7 +41,7 @@ class WeddingVenues::CLI
     else
       puts ""
       puts "I don't understand that answer."
-      start
+      venue_information
     end
   end
 
