@@ -64,6 +64,10 @@ class WeddingVenues::CLI
       puts "Location:           #{venue.location}"
       puts "Website:            #{venue.url}"
       puts ""
+      puts "---------------Description--------------"
+      puts ""
+      puts "#{venue.description}"
+      puts ""
     another_venue
     end
   end
