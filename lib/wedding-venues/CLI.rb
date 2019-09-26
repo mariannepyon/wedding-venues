@@ -27,9 +27,10 @@ class WeddingVenues::CLI
     if input.to_i > 0
       venue = WeddingVenues::Venue.find(input.to_i)
       print_venue(venue)
-    # elsif input.to_i > 36
-    #   puts ""
-    #   puts "I don't understand that answer."
+      venue_information
+    elsif input.to_i > 35
+      puts ""
+      puts "I don't understand that answer."
       venue_information
     else
       puts ""

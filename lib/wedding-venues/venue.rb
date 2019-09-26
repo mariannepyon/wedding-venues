@@ -8,7 +8,7 @@ class WeddingVenues::Venue
     self.new(
       venue.css(".venue-name").text,
       venue.css(".venue-region").text.strip,
-      venue.css(".venue-description").text,
+      venue.css(".venue-description").text.strip,
       "https://www.wedding-spot.com#{venue.css("a").attribute("href")}"
       )
     end
