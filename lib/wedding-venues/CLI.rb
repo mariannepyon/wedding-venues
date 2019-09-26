@@ -5,7 +5,7 @@ class WeddingVenues::CLI
   def call
     WeddingVenues::Scraper.new.make_venues
     puts "Congratulations on your engagement!" 
-    puts "Welcome to Northern California wedding venues!"
+    puts "Welcome to Northern California TOP 10 wedding venues!"
     list_venues
     venue_information
     another_venue
@@ -27,10 +27,6 @@ class WeddingVenues::CLI
     if input.to_i > 0
       venue = WeddingVenues::Venue.find(input.to_i)
       print_venue(venue)
-      venue_information
-    elsif input.to_i > 35
-      puts ""
-      puts "I don't understand that answer."
       venue_information
     else
       puts ""

@@ -22,7 +22,7 @@ class WeddingVenues::Venue
   end
   
   def self.all
-    @@all
+    @@all.take(10)
   end
  
 
@@ -34,5 +34,5 @@ class WeddingVenues::Venue
     @doc ||= Nokogiri::HTML(open(self.url))
   end
 end
-  
+
 
