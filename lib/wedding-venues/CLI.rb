@@ -4,7 +4,7 @@ class WeddingVenues::CLI
   
   def call
     WeddingVenues::Scraper.new.make_venues
-    puts "Welcome to wedding venues!"
+    puts "Congratulations on your engagement!Welcome to wedding venues!"
     list_venues
     venue_information
     # goodbye
@@ -20,9 +20,9 @@ class WeddingVenues::CLI
   
   def venue_information
     puts ""
-    puts "Which venue would you like more information on?"
+    puts "Which venue would you like more information on? Please write the number:"
 
-    input = gets.strip
+    input = gets.strip.to_i
     
     venue = WeddingVenues::Venue.find(input.to_i)
     
@@ -33,6 +33,7 @@ class WeddingVenues::CLI
 
     input = gets.strip.downcase
     if input == "y"
+      list_venues
       venue_information
     elsif input == "n"
       puts ""
