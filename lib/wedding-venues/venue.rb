@@ -9,7 +9,7 @@ class WeddingVenues::Venue
       venue.css(".venue-name").text,
       venue.css(".venue-region").text.strip,
       venue.css(".venue-description").text.strip,
-      "https://www.wedding-spot.com#{venue.css("a").attribute("href")}"
+      "https://www.wedding-spot.com/wedding-venues/"
       )
     end
   
