@@ -6,8 +6,8 @@ class WeddingVenues::Venue
   
    def self.new_from_index_page(venue)
     self.new(
-      venue.css("venue-name").text,
-      venue.css("venue-region").text,
+      venue.css(".venue-name").text,
+      venue.css(".venue-region").text.strip,
       "https://www.wedding-spot.com#{venue.css("a").attribute("href")}"
       )
     end
